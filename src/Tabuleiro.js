@@ -22,11 +22,11 @@ class Checkers extends React.Component {
     render() {
         return (
             <>
+                <div className="fundo" style={{backgroundImage: 'url(fundo.jpg)'}}>
+
+                </div>
                 <section>
-                
-                </section>
-                <section>
-                    <table>
+                    <table className="tabuleiroo">
                         <tbody>
                             {
                                 this.state.tabuleiro.map((linha, i) => (
@@ -36,8 +36,9 @@ class Checkers extends React.Component {
                                                 <td key={j}
                                                     onClick={() => this.peca(j)}>
                                                         {
-                                                            this.state.tabuleiro[i][j] === 'c' ? "C" : 
-                                                            this.state.tabuleiro[i][j] === 'i' ? "I" : ' '
+                                                            this.state.tabuleiro[i][j] === 'c' ? <img src=
+                                                            "/flash.png"/> : 
+                                                            this.state.tabuleiro[i][j] === 'i' ? <img src="/thanos.png" /> : ' '
                                                         }
                                                     </td>
                                             ))
